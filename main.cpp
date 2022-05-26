@@ -51,22 +51,6 @@ const int VOLUME_music_max = MIX_MAX_VOLUME / 2;
 int VOLUME_music = MIX_MAX_VOLUME / 2;
 int VOLUME_chuck = MIX_MAX_VOLUME / 2;
 
-// bool isMouseIn(SDL_Event e, Button button)
-// {
-//     int mouseX, mouseY;
-//     int x, y, w, h;
-//     SDL_GetMouseState(&mouseX, &mouseY);
-//     if (mouseX < button.x)
-//         return false;
-//     if (mouseY < button.y)
-//         return false;
-//     if (mouseX > button.x + button.w)
-//         return false;
-//     if (mouseY > button.y + button.h)
-//         return false;
-//     return true;
-// }
-
 // Render menu ---------------------------------------------------------------//
 Graphic g;
 TTF_Font *font36;
@@ -439,7 +423,6 @@ int main(int agrc, char *agrv[])
             game.score = 0;
         if (drawed == 1)
         {
-
             textEnd(g, game.score, highscore); // Instruction to play agian
             drawed = 0;
         }
