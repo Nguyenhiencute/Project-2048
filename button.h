@@ -27,4 +27,20 @@ Button UpBotton(280, 290, 36, 36);
 Button DownBotton(230, 290, 36, 36);
 Button quitButton(230, 330, 100, 28);
 
+bool isMouseIn(SDL_Event e, Button button)
+{
+    int mouseX, mouseY;
+    int x, y, w, h;
+    SDL_GetMouseState(&mouseX, &mouseY);
+    if (mouseX < button.x)
+        return false;
+    if (mouseY < button.y)
+        return false;
+    if (mouseX > button.x + button.w)
+        return false;
+    if (mouseY > button.y + button.h)
+        return false;
+    return true;
+}
+
 #endif // BUTTON_H
