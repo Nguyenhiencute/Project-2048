@@ -15,6 +15,7 @@
 #include "draw.h"
 #include "solving.h"
 #include "event.h"
+#include "button.h"
 
 using namespace std;
 
@@ -41,7 +42,7 @@ bool initGraphic(Graphic &g);
 
 void highBoard(Graphic &g, HighScore &hs);                 // Draw high score board
 void textEnd(Graphic &g, long long &score, HighScore &hs); // Play again by pressing ENTER
-void close(Graphic &g);                                    // Destroy everything <necessary>
+void close(Graphic &g);                                    // Destroy everything 
 
 // Music and menu ------------------------------------------------------------//
 bool mute = false;
@@ -49,25 +50,6 @@ bool mainMenu = true;
 const int VOLUME_music_max = MIX_MAX_VOLUME / 2;
 int VOLUME_music = MIX_MAX_VOLUME / 2;
 int VOLUME_chuck = MIX_MAX_VOLUME / 2;
-
-struct Button
-{
-    int x, y, w, h;
-    Button(int _x = 0, int _y = 0, int _w = 0, int _h = 0)
-    {
-        x = _x;
-        y = _y;
-        w = _w;
-        h = _h;
-    }
-};
-
-Button playButton(230, 210, 180, 28);
-Button MuteButtom(230, 250, 100, 28);
-Button UnmuteButtom(230, 250, 100, 28);
-Button UpBottom(280, 290, 36, 36);
-Button DownBottom(230, 290, 36, 36);
-Button quitButton(230, 330, 100, 28);
 
 bool isMouseIn(SDL_Event e, Button button)
 {
@@ -308,7 +290,7 @@ int main(int agrc, char *agrv[])
                             return 0;
                         }
                     }
-                    if (isMouseIn(g.event, MuteButtom))
+                    if (isMouseIn(g.event, MuteButton))
                     {
                         if (!mute && g.event.type == SDL_MOUSEBUTTONDOWN)
                         {
@@ -317,7 +299,7 @@ int main(int agrc, char *agrv[])
                             continue;
                         }
                     }
-                    if (isMouseIn(g.event, UnmuteButtom))
+                    if (isMouseIn(g.event, UnmuteButton))
                     {
                         if (mute && g.event.type == SDL_MOUSEBUTTONDOWN)
                         {
@@ -326,7 +308,7 @@ int main(int agrc, char *agrv[])
                             continue;
                         }
                     }
-                    if (isMouseIn(g.event, UpBottom))
+                    if (isMouseIn(g.event, UpBotton))
                     {
                         if (g.event.type == SDL_MOUSEBUTTONDOWN)
                         {
@@ -337,7 +319,7 @@ int main(int agrc, char *agrv[])
                             Mix_VolumeMusic(VOLUME_music);
                         }
                     }
-                    if (isMouseIn(g.event, DownBottom))
+                    if (isMouseIn(g.event, DownBotton))
                     {
                         if (g.event.type == SDL_MOUSEBUTTONDOWN)
                         {
@@ -384,28 +366,28 @@ int main(int agrc, char *agrv[])
 
                 if (mute)
                 {
-                    if (isMouseIn(g.event, UnmuteButtom))
-                        render(UnmuteButtom.x, UnmuteButtom.y, "UNMUTE", font28, white);
+                    if (isMouseIn(g.event, UnmuteButton))
+                        render(UnmuteButton.x, UnmuteButton.y, "UNMUTE", font28, white);
                     else
-                        render(UnmuteButtom.x, UnmuteButtom.y, "UNMUTE", font24, white);
+                        render(UnmuteButton.x, UnmuteButton.y, "UNMUTE", font24, white);
                 }
                 else
                 {
-                    if (isMouseIn(g.event, MuteButtom))
-                        render(MuteButtom.x, MuteButtom.y, "MUTE", font28, white);
+                    if (isMouseIn(g.event, MuteButton))
+                        render(MuteButton.x, MuteButton.y, "MUTE", font28, white);
                     else
-                        render(MuteButtom.x, MuteButtom.y, "MUTE", font24, white);
+                        render(MuteButton.x, MuteButton.y, "MUTE", font24, white);
                 }
 
-                if (isMouseIn(g.event, DownBottom))
-                    render(DownBottom.x, DownBottom.y, "-", font36, white);
+                if (isMouseIn(g.event, DownBotton))
+                    render(DownBotton.x, DownBotton.y, "-", font36, white);
                 else
-                    render(DownBottom.x, DownBottom.y, "-", font32, white);
+                    render(DownBotton.x, DownBotton.y, "-", font32, white);
 
-                if (isMouseIn(g.event, UpBottom))
-                    render(UpBottom.x, UpBottom.y, "+", font36, white);
+                if (isMouseIn(g.event, UpBotton))
+                    render(UpBotton.x, UpBotton.y, "+", font36, white);
                 else
-                    render(UpBottom.x, UpBottom.y, "+", font32, white);
+                    render(UpBotton.x, UpBotton.y, "+", font32, white);
 
                 if (isMouseIn(g.event, quitButton))
                     render(quitButton.x, quitButton.y, "QUIT", font28, white);
