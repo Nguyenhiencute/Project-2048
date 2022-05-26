@@ -202,7 +202,6 @@ void cleanUp()
 {
     SDL_DestroyWindow(g.Window);
 }
-
 //=============================================================================//
 
 int main(int agrc, char *agrv[])
