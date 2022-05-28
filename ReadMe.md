@@ -20,11 +20,11 @@
 
 ## 3. Mô tả chung về trò chơi
 
-- Video demo:
+- Video demo: <https://drive.google.com/drive/folders/1XqHq8Saqa4mpiNQcwtMKpNxOumQX24Qi?usp=sharing>
 
 - 2048 chơi trên một lưới vuông 4x4. Mục tiêu của trò chơi là trượt các khối vuông có mang số giống nhau để kết hợp chúng lại và tạo ra khối vuông có giá trị cộng dồn. Trò chơi kết thúc khi các khối vuông không thể trượt được nữa và lấp đầy lưới.
 
-## 4. Mô tả các chức năng cài đặt kèm video minh hoạ:
+## 4. Mô tả các chức năng cài đặt:
 
 ### 4.1. Menu: 
 
@@ -34,27 +34,34 @@
 
 - Có hiệu ứng zoom chữ khi di chuyển con trỏ chuột tới các nút
 
-### 4.2. game:
+### 4.2. Game:
 
-- Mỗi lần di chuyển là một lượt, sử dụng các phím mũi tên: lên - xuống - trái - phải để trượt các ô vuông. 
+- Mỗi lần di chuyển là một lượt, sử dụng các phím mũi tên: "lên - xuống - trái - phải" để trượt các ô vuông. 
 
 - Sử dụng phím "Space" để quay lại 1 thao tác. 
 
-- (Sử dụng phím "Left Ctrl/ Left control" để kết thúc trò chơi)
+- Sử dụng phím "LCtrl/Lcontrol" để kết thúc trò chơi
 
 - Mỗi lượt có một khối có giá trị 2 hoặc 4 sẽ xuất hiện ngẫu nhiên (2 xuất hiện ngẫu nhiên nhiều hơn 4). 
-
 - Các khối vuông trượt theo hướng chỉ định cho đến khi chạm đến biên của lưới hoặc chạm vào khối vuông khác. Nếu hai khối vuông có cùng giá trị chạm vào nhau, chúng sẽ kết hợp lại thành một khối vuông có giá trị bằng tổng giá trị hai khối vuông đó.
 
 - Các khối vuông mang giá trị khác nhau sẽ có màu sắc khác nhau.
 
-- "Score:o biết điểm của người chơi. Khi hai khối vuông kết hợp thì người chơi sẽ tăng điểm là giá trị khối vuông mới
+- "Score" biết điểm của người chơi. Khi hai khối vuông kết hợp thì người chơi sẽ tăng điểm là giá trị khối vuông mới
 
-- end game sử dụng phím enter/return để bắt đầu lại trò chơi. hiển thị xếp hạng top 5 điểm cao nhất 
+### 4.3. End game:
+
+- Sử dụng phím "enter/return" để bắt đầu lại trò chơi. Hiển thị xếp hạng top 5 điểm cao nhất.
 
 ## 5. Nguồn tham khảo:
 
+- <https://www.youtube.com/watch?v=Dyz9O7s7B8w&t=360s> (Install SDL2.0)
+- <https://lazyfoo.net/tutorials/SDL/index.php> (Thư viện SDL2.0, ...)
+- Các nguồn source code trên mạng.
+- Lớp lập trình CLB TVHSV.
+
 ## 6. Các kĩ thuật được sử dụng:
 
-## 7. Kết luận, hướng phát triển và các điều tâm đắc rút ra được khi hoàn thành chương trình
-
+- Đồ họa, render text, âm thanh với SDL2.0
+- Cấu trúc: Struct/Class...
+- Sử dụng mảng, con trỏ
