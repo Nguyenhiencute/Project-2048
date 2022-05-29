@@ -8,7 +8,7 @@
 
 using namespace std;
 
-const int boardSize = 4; 
+const int boardSize = 4; // Size of board
 
 const int spriteSize = 130; // Size of source sprite
 const int spriteWin = 100;  // Size of Window sprite
@@ -16,7 +16,7 @@ const int spriteWin = 100;  // Size of Window sprite
 const int window_width = 600;
 const int window_height = 700;
 
-const int aRandom[] = {2, 2, 2, 2, 2, 4}; 
+const int aRandom[] = {2, 2, 2, 2, 2, 4}; // In order to make the times random 2 more than random 4
 
 const SDL_Color White = {255, 255, 255, 255};
 

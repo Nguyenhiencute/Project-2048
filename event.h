@@ -6,7 +6,7 @@
 #include "game.h"
 #include "graphic.h"
 
-void initEvent(Game& game, Graphic& g, bool& moved); 
-void toolhack(Game& game, Graphic& g); // Trick
+void initEvent(Game& game, Graphic& g, bool& moved);
+void toolhack(Game& game, Graphic& g);
 
 #endif // EVENT_H

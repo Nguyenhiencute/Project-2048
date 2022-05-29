@@ -12,8 +12,8 @@ void drawScore(long long &score, Graphic &g)
     ss << score; // Turn score to string
     string out = "Score: " + ss.str();
 
-    sur = TTF_RenderText_Solid(g.font, out.c_str(), White); // Create text from surface
-    g.text = SDL_CreateTextureFromSurface(g.renderer, sur); // Turn text into texture
+    sur = TTF_RenderText_Solid(g.font, out.c_str(), White); // create text from surface
+    g.text = SDL_CreateTextureFromSurface(g.renderer, sur); // turn text into texture
 
     SDL_FreeSurface(sur);
 }
@@ -22,9 +22,9 @@ void drawGame(Game &game, Graphic &g)
 {
     SDL_RenderClear(g.renderer); // Clear the render before drawing again
     SDL_Rect rec = {0, 0, window_width, window_height};
-    SDL_RenderCopy(g.renderer, g.background, &rec, NULL); // Draw background
+    SDL_RenderCopy(g.renderer, g.background, &rec, NULL); // draw background
 
-    bool MTP; // If a box is empty
+    bool MTP; // if a box is empty
     int pos = 0;
 
     for (int i = 1; i <= boardSize; i++)
@@ -84,7 +84,7 @@ void drawGame(Game &game, Graphic &g)
             default:
                 MTP = 1;
             }
-            pos = i * boardSize - (boardSize - j) - 1; // Position of the box in winRec[]
+            pos = i * boardSize - (boardSize - j) - 1; // position of the box in winRec[]
             if (MTP == 0)
                 SDL_RenderCopy(g.renderer, g.spriteTexture, &rec, &g.winRec[pos]); // cut spriteTexture into rec and then draw in Window at the position of winRec
         }
