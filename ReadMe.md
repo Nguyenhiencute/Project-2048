@@ -6,7 +6,9 @@
 
 - Nguyễn Thị Hiền - 21020316
 
-## 2. Hướng dẫn cài đặt
+## 2. Hướng dẫn cài đặt:
+
+- Máy cài đặt thư viện SDL2_image, SDL2_ttf, SDL2_mixer
 
 - Mở terminal, clone Project-2048 về:
 
@@ -57,11 +59,16 @@
 
 - <https://www.youtube.com/watch?v=Dyz9O7s7B8w&t=360s> (Install SDL2.0)
 - <https://lazyfoo.net/tutorials/SDL/index.php> (Thư viện SDL2.0, ...)
-- Các nguồn source code trên mạng.
+- Các nguồn internet.
 - Lớp lập trình CLB TVHSV.
 
 ## 6. Các kĩ thuật được sử dụng:
 
 - Đồ họa, render text, âm thanh với SDL2.0
 - Cấu trúc: Struct/Class...
-- Sử dụng mảng, con trỏ
+- Sử dụng mảng, con trỏ, đọc ghi file..
+
+## 7. Kết luận, hướng phát triển và các điều tâm đắc rút ra được sau khi hoàn thiện chương trình:
+ 
+ - Em được tìm hiểu cách sử dụng thư viện đồ họa để tạo nên 1 game cơ bản... Code không được clean và khó đọc, chưa tối ưu nên em sẽ cố gắng trau dồi.
+ - Hướng phát triển: Thêm thời gian đến ngược để hoàn thành trò chơi; Thêm các level cao hơn tương ướng với kích cỡ của lưới vuông.
