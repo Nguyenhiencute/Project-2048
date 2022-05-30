@@ -65,7 +65,7 @@
 ## 6. Các kĩ thuật được sử dụng:
 
 - Đồ họa, render text, âm thanh với SDL2.0
-- Cấu trúc: Struct/Class...
+- Cấu trúc: Struct...
 - Sử dụng mảng, con trỏ, đọc ghi file..
 
 ## 7. Kết luận, hướng phát triển và các điều tâm đắc rút ra được sau khi hoàn thiện chương trình:
